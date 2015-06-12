@@ -81,7 +81,7 @@ if os.path.exists(CONFIG_FILE):
     try:
         execfile(CONFIG_FILE, mod.__dict__)
         sys.modules[mod.__name__] = mod
-        from tmp_config import *
+        from tmp_config import *  # noqa
     except:
         sys.stderr.write("Couldn't load configuration file\n")
         import traceback

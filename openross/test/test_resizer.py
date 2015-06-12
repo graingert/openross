@@ -1,7 +1,6 @@
 from openross.pipeline.resizer import Resizer
 import unittest
 import hashlib
-import os
 from openross import engine
 
 import pkg_resources

@@ -10,9 +10,9 @@ class TestCacher(unittest.TestCase):
 
     def setUp(self):
         self.testpayload = {
-            'width' : '200',
-            'height' : '200',
-            'mode' : 'resize',
+            'width': '200',
+            'height': '200',
+            'mode': 'resize',
             'image_path': 'test.jpeg',
             'image': 'test',
             'original_image': 'test',
@@ -21,9 +21,9 @@ class TestCacher(unittest.TestCase):
             test_settings.CACHE_LOCATION, 'test_200x200_resize.jpeg')
 
         self.testpayload_original = {
-            'width' : '-1',
-            'height' : '-1',
-            'mode' : 'r',
+            'width': '-1',
+            'height': '-1',
+            'mode': 'r',
             'image_path': 'test.jpeg',
             'image': 'test',
             'original_image': 'test',
@@ -58,4 +58,3 @@ class TestCacher(unittest.TestCase):
 
         yield cacher.process_image(self.testpayload_original)
         self.assertTrue(os.path.exists(self.testlocation_original), True)
-
