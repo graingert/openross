@@ -1,10 +1,10 @@
 from twisted.internet import defer, threads
 from twisted.python import log
 from datetime import datetime
-from utils import time_on_statsd, statsd_name
-from image_modes import process_image_with_mode
+from openross.utils import time_on_statsd, statsd_name
+from openross.image_modes import process_image_with_mode
 import pgmagick as pg
-import settings
+from openross import settings
 import logging
 
 

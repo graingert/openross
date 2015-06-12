@@ -1,4 +1,4 @@
-from middleware import MiddlewareManager
+from openross.middleware import MiddlewareManager
 
 
 class ImagePipelineManager(MiddlewareManager):

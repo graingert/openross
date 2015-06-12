@@ -1,12 +1,12 @@
 DEBUG = False
 USE_BOTO = False
 
-IMAGE_PROCESSOR = 'pipeline.ImagePipelineManager'
+IMAGE_PROCESSOR = 'openross.pipeline.ImagePipelineManager'
 IMAGE_PIPELINES = [
-    'pipeline.cache_check.CacheCheck',
-    'pipeline.s3_downloader.S3Downloader',
-    'pipeline.resizer.Resizer',
-    'pipeline.cacher.Cacher',
+    'openross.pipeline.cache_check.CacheCheck',
+    'openross.pipeline.s3_downloader.S3Downloader',
+    'openross.pipeline.resizer.Resizer',
+    'openross.pipeline.cacher.Cacher',
 ]
 
 THREAD_POOL_SIZE = 8

@@ -1,7 +1,7 @@
 from twisted.internet import defer, threads
 from twisted.python import log
-from utils import time_on_statsd, statsd_name
-import settings
+from openross.utils import time_on_statsd, statsd_name
+from openross import settings
 import glob
 import os
 import logging

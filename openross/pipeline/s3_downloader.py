@@ -1,12 +1,12 @@
 from twisted.internet import defer, threads, task, reactor
 from twisted.python import log
 from datetime import datetime
-from errors import NoDataInS3Error
-from utils import time_on_statsd, statsd_name
+from openross.errors import NoDataInS3Error
+from openross.utils import time_on_statsd, statsd_name
 from txaws.service import AWSServiceRegion
 from txaws.regions import S3_EU_WEST
 import boto
-import settings
+from openross import settings
 import logging
 
 

@@ -1,9 +1,9 @@
 from twisted.trial import unittest
 from twisted.internet import defer
-from pipeline.cacher import Cacher
+from openross.pipeline.cacher import Cacher
 import os
-import engine
-import test_settings
+from openross import engine
+from openross import test_settings
 
 
 class TestCacher(unittest.TestCase):
@@ -42,7 +42,7 @@ class TestCacher(unittest.TestCase):
         """ Test cacher pipeline for normal file
         """
         cacher = Cacher(engine.BobRossEngine())
-        import settings
+        from openross import settings
         settings.CACHE_LOCATION = test_settings.CACHE_LOCATION + '/'
 
         yield cacher.process_image(self.testpayload)
@@ -53,7 +53,7 @@ class TestCacher(unittest.TestCase):
         """ Test cacher pipeline for normal file
         """
         cacher = Cacher(engine.BobRossEngine())
-        import settings
+        from openross import settings
         settings.CACHE_LOCATION = test_settings.CACHE_LOCATION + '/'
 
         yield cacher.process_image(self.testpayload_original)

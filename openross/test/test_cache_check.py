@@ -1,8 +1,8 @@
 import unittest
-import engine
-import test_settings
+from openross import engine
+from openross import test_settings
 import os
-from pipeline.cache_check import CacheCheck
+from openross.pipeline.cache_check import CacheCheck
 
 
 class TestCacheCheck(unittest.TestCase):
@@ -18,7 +18,7 @@ class TestCacheCheck(unittest.TestCase):
 
     def test_cache_has_original_image(self):
         cachec = CacheCheck(engine.BobRossEngine())
-        import settings
+        from openross import settings
         settings.CACHE_LOCATION = test_settings.CACHE_LOCATION + '/'
 
         test_file_path = '%s/%s' % (test_settings.CACHE_LOCATION, 'image*')

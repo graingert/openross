@@ -2,8 +2,8 @@ from twisted.internet import defer
 from twisted.internet import fdesc
 from twisted.python import log
 from datetime import datetime
-from utils import time_on_statsd, statsd_name
-import settings
+from openross.utils import time_on_statsd, statsd_name
+from openross import settings
 import os
 import logging
 

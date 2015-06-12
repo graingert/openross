@@ -1,24 +1,30 @@
-from pipeline.resizer import Resizer
+from openross.pipeline.resizer import Resizer
 import unittest
 import hashlib
 import os
-import engine
+from openross import engine
+
+import pkg_resources
 
 
 class TestResizer(unittest.TestCase):
 
     def setUp(self):
-        self.test_in = os.path.abspath(
-            'test/test_data/resizer/test-in.jpeg'
+        self.test_in = pkg_resources.resource_filename(
+            __name__,
+            'test_data/resizer/test-in.jpeg',
         )
-        self.test_reference_crop = os.path.abspath(
-            'test/test_data/resizer/test-reference-crop.jpeg'
+        self.test_reference_crop = pkg_resources.resource_filename(
+            __name__,
+            'test_data/resizer/test-reference-crop.jpeg',
         )
-        self.test_reference_resize = os.path.abspath(
-            'test/test_data/resizer/test-reference-resize.jpeg'
+        self.test_reference_resize = pkg_resources.resource_filename(
+            __name__,
+            'test_data/resizer/test-reference-resize.jpeg',
         )
-        self.test_reference_resizecomp = os.path.abspath(
-            'test/test_data/resizer/test-reference-resizecomp.jpeg'
+        self.test_reference_resizecomp = pkg_resources.resource_filename(
+            __name__,
+            'test_data/resizer/test-reference-resizecomp.jpeg'
         )
 
     def _load_image_as_str(self, file):
